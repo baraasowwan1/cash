@@ -1,10 +1,10 @@
 const images = [
   "https://i.im.ge/2025/12/30/Bbtzvq.layering-2.webp",
   "https://i.im.ge/2025/12/30/Bbtv6P.layering-1.webp",
-  "https://images.unsplash.com/photo-1605559424843-9c3a4d4a1c33",
-  "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
-  "https://images.unsplash.com/photo-1617814076367-b759c7d7e738",
-  "https://images.unsplash.com/photo-1600369672770-985fd30004eb",
+  "https://i.im.ge/2025/12/30/Bbyf8J.Rectangle-27.webp",
+  "https://i.im.ge/2025/12/30/BbyzQy.2021-06-23.webp",
+  "https://i.im.ge/2025/12/30/BbyHLS.2021-04-06.webp",
+  "https://i.im.ge/2025/12/30/BbyV9a.2025-02-23.webp",
 ];
 
 export function OurWork() {
