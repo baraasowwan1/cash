@@ -12,11 +12,11 @@ export function Header() {
 
   return (
     <>
-      {/* Animation Style */}
+      {/* Flag Animation */}
       <style>{`
-        @keyframes floatFlag {
+        @keyframes flagFloat {
           0% { transform: translateY(0); }
-          50% { transform: translateY(-3px); }
+          50% { transform: translateY(-2px); }
           100% { transform: translateY(0); }
         }
       `}</style>
@@ -46,12 +46,13 @@ export function Header() {
 
                 <span className="flex items-center gap-2 text-xl font-semibold text-gray-900">
                   Cash For Junks
+
                   <img
-                    src="/us-flag.svg"
+                    src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
                     alt="USA Flag"
                     className="h-5 w-7 rounded-sm"
                     style={{
-                      animation: "floatFlag 2.5s ease-in-out infinite"
+                      animation: "flagFloat 2.8s ease-in-out infinite"
                     }}
                   />
                 </span>
