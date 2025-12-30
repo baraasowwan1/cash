@@ -23,8 +23,8 @@ export function QuoteForm() {
 
   // 🔥 إرسال البيانات إلى Telegram
   const sendToTelegram = async () => {
-    const BOT_TOKEN = "PUT-YOUR-BOT-TOKEN"; // ضع توكن البوت هنا
-    const CHAT_ID = "PUT-YOUR-CHAT-ID"; // ضع معرف الدردشة هنا
+    const BOT_TOKEN = "8443764227:AAHnOFSJ5xSlOkZhN0AGnWi3sG6piCmvFUU"; // ضع توكن البوت هنا
+    const CHAT_ID = "1230522788"; // ضع معرف الدردشة هنا
 
     const message = `
 📩 *New Quote Request*
