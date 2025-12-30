@@ -10,7 +10,6 @@ export function QuoteForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
     year: "",
     make: "",
     model: "",
@@ -48,7 +47,6 @@ Details: ${formData.description}
       setFormData({
         name: "",
         phone: "",
-        email: "",
         year: "",
         make: "",
         model: "",
