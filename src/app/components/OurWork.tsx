@@ -16,7 +16,7 @@ export function OurWork() {
             Our Recent Work
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Some junk cars we picked up for cash
+            Chicago
           </p>
         </div>
 
