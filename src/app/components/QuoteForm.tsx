@@ -21,28 +21,41 @@ export function QuoteForm() {
 
   const [submitted, setSubmitted] = useState(false);
 
-  // دالة لإرسال البيانات على واتساب
-  const sendToWhatsApp = () => {
+  // 🔥 إرسال البيانات إلى Telegram
+  const sendToTelegram = async () => {
+    const BOT_TOKEN = "PUT-YOUR-BOT-TOKEN"; // ضع توكن البوت هنا
+    const CHAT_ID = "PUT-YOUR-CHAT-ID"; // ضع معرف الدردشة هنا
+
     const message = `
-Get Your Free Quote:
-name: ${formData.name}
-mobile: ${formData.phone}
-email: ${formData.email}
-car: ${formData.year} ${formData.make} ${formData.model}
-statu: ${formData.condition}
-ZIP: ${formData.zipCode}
-Details: ${formData.description}
-    `;
-    const phoneNumber = "17089791549"; // ضع رقمك هنا بصيغة: 962XXXXXXXXX بدون +
-    const url = `https://wa.me/${17089791549}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
+📩 *New Quote Request*
+
+👤 Name: ${formData.name}
+📞 Phone: ${formData.phone}
+📧 Email: ${formData.email}
+🚗 Car: ${formData.year} ${formData.make} ${formData.model}
+⚙ Status: ${formData.condition}
+📍 ZIP: ${formData.zipCode}
+📝 Details: ${formData.description || "No details"}
+`;
+
+    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: 1230522788,
+        text: message,
+        parse_mode: "Markdown",
+      }),
+    });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    await sendToTelegram(); // إرسال الطلب مباشرة للتلجرام
     setSubmitted(true);
-    sendToWhatsApp(); // ترسل البيانات على واتساب
-    // إعادة تعيين النموذج بعد 3 ثواني
+
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
@@ -56,7 +69,7 @@ Details: ${formData.description}
         zipCode: "",
         description: "",
       });
-    }, 3000);
+    }, 2000);
   };
 
   return (
@@ -102,6 +115,7 @@ Details: ${formData.description}
                       placeholder="John Doe"
                     />
                   </div>
+
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number *</Label>
                     <Input
@@ -138,6 +152,7 @@ Details: ${formData.description}
                       placeholder="2015"
                     />
                   </div>
+
                   <div className="space-y-2">
                     <Label htmlFor="make">Make *</Label>
                     <Input
@@ -148,6 +163,7 @@ Details: ${formData.description}
                       placeholder="Toyota"
                     />
                   </div>
+
                   <div className="space-y-2">
                     <Label htmlFor="model">Model *</Label>
                     <Input
@@ -179,6 +195,7 @@ Details: ${formData.description}
                       </SelectContent>
                     </Select>
                   </div>
+
                   <div className="space-y-2">
                     <Label htmlFor="zipCode">ZIP Code *</Label>
                     <Input
