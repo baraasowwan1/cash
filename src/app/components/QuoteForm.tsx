@@ -26,7 +26,6 @@ export function QuoteForm() {
 Get Your Free Quote:
 name: ${formData.name}
 mobile: ${formData.phone}
-email: ${formData.email}
 car: ${formData.year} ${formData.make} ${formData.model}
 statu: ${formData.condition}
 ZIP: ${formData.zipCode}
