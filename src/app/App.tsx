@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
+import { OurWork } from "./components/OurWork";
 import { Benefits } from "./components/Benefits";
 import { QuoteForm } from "./components/QuoteForm";
 import { Testimonials } from "./components/Testimonials";
@@ -16,12 +17,11 @@ export default function App() {
       <main>
         <Hero />
         <HowItWorks />
+        <OurWork />
         <Benefits />
         <QuoteForm />
         <Testimonials />
         <FAQ />
-
-        {/* 🌍 Google Map – Full Width */}
         <MapSection />
       </main>
 
