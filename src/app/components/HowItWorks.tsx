@@ -15,7 +15,7 @@ export function HowItWorks() {
     {
       icon: DollarSign,
       title: "3. Get Paid",
-      description: "Sign over the title and receive cash on the spot. It's that simple! Payment within 24-48 hours.",
+      description: "Sign over the title and receive cash on the spot. It's that simple! Payment within instantly.",
     },
   ];
 
