@@ -1,5 +1,4 @@
 import React from "react";
-import { CheckIcon } from "@heroicons/react/24/solid"; // نستخدم أيقونة من heroicons
 
 export const ServiceAreas = () => {
   const serviceAreas = {
@@ -42,7 +41,8 @@ export const ServiceAreas = () => {
               <ul className="space-y-2">
                 {cities.map((city) => (
                   <li key={city} className="flex items-center text-gray-800">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                    {/* استخدم رمز ✅ بدلاً من أي مكتبة */}
+                    <span className="text-green-500 mr-2">✅</span>
                     {city}
                   </li>
                 ))}
