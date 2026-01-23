@@ -45,7 +45,7 @@ export function Header() {
                 </div>
 
                 <span className="flex items-center gap-2 text-xl font-semibold text-gray-900">
-                  Cash For Junks
+                  Cash For Junks Maximum LLS
 
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
