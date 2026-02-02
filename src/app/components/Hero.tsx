@@ -19,7 +19,7 @@ export function Hero() {
           className="hidden md:block absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://6949b44e30e1aa8ca4b7eeda.imgix.net/SCRAP-CAR-REMOVAL-Maple-Ridge-BC-Cash-For-Car-Maple-Ridge-BC.png)",
+              "url(https://webuyjunkcars4cash.com/wp-content/uploads/2021/02/Get-Cash-For-Junk-Cars-in-the-Chicagoland-Area.webp)",
           }}
         />
 
